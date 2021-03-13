@@ -1,0 +1,124 @@
+<ng-container id="signup">
+<mat-card align=center>
+    <mat-tab-group>
+        <mat-tab label="Login"><ng-container [ngTemplateOutlet]="login"></ng-container> </mat-tab>
+        <mat-tab label="Sign Up"><ng-container [ngTemplateOutlet]="signup"></ng-container>  </mat-tab>
+      </mat-tab-group>
+</mat-card>
+</ng-container>
+<ng-template #login>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Email Id</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-button mat-raised-button routerLink="Home"  color="primary">Login </button>
+    </div>
+</ng-template>
+
+
+<ng-template #signup>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Email Id</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Phone No</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+    
+<mat-form-field appearance="fill">
+  <mat-label>Branch</mat-label>
+  <mat-select  required>
+    <mat-option value="Computer">Computer</mat-option>
+    <mat-option value="Mechanical">Mechanical</mat-option>
+    <mat-option value="Electrical">Electrical</mat-option>
+    <mat-option value="E&TC">E&TC</mat-option>
+    <mat-option value="Faculty">Faculty</mat-option>
+  </mat-select>
+</mat-form-field>
+    </div>
+    <div><mat-tab-group>
+        <mat-tab label="Alumni"><ng-container [ngTemplateOutlet]="Alumni"></ng-container> </mat-tab>
+        <mat-tab label="Student"><ng-container [ngTemplateOutlet]="Student"></ng-container>  </mat-tab>
+        <mat-tab label="Faculty"><ng-container [ngTemplateOutlet]="Faculty"></ng-container>  </mat-tab>
+
+    </mat-tab-group></div>
+  
+</ng-template>
+
+
+<ng-template #Alumni>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Passout Year</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Current Working As</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Company Name</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-button mat-raised-button  routerLink="Home" color="primary">Signup </button>
+    </div>
+</ng-template>
+<ng-template #Student>
+    <mat-form-field appearance="fill">
+        <mat-label>Current Year</mat-label>
+        <mat-select  required>
+          <mat-option value="Computer">1st</mat-option>
+          <mat-option value="Mechanical">2nd</mat-option>
+          <mat-option value="Electrical">3rd</mat-option>
+          <mat-option value="E&TC">4th</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button mat-raised-button  routerLink="Home" color="primary">Signup </button>
+    </div>
+</ng-template>
+<ng-template #Faculty>
+    <div>
+        <mat-form-field class="example-form-field">
+            <mat-label>Designation</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-button mat-raised-button  routerLink="Home" color="primary">Signup </button>
+    </div>
+</ng-template>
